@@ -313,12 +313,12 @@ ROC curves were intentionally not prioritised because the large number of true n
 
 ## Results
 
-| Stage | Macro F1 |
+| Stage | Validation Macro F1 |
 |---|---|
-| Raw TF-IDF baseline (Logistic Regression) | 0.7968 |
-| + Feature engineering | 0.8137 |
-| + Hyperparameter tuning | 0.8273 |
-| + `char_wb` TF-IDF + LightGBM (final) | **0.8353** |
+| Baseline: word-level TF-IDF + Logistic Regression | 0.7968 |
+| + Feature engineering (Yeo-Johnson, zero-inflation flags, sine-cosine time features, `char_wb` TF-IDF) | 0.8137 |
+| + Hyperparameter tuning (Logistic Regression) | 0.8273 |
+| Tuned LightGBM (final) | **0.8353** |
 
 ### Public Leaderboard Performance
 
